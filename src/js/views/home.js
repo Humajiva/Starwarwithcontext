@@ -4,7 +4,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { CharacterCard } from "../component/CharacterCard";
 import { PlanetCard } from "../component/PlanetCard";
-
+import { CharachterDetail } from "../component/characterdetail";
 
 //I have 2 set os collection (create 2 array)
 //i have to create component card from boostrap
@@ -101,17 +101,25 @@ const updatePut = (updatedCharacters) => {
 		<h1>STAR WARS</h1>
 		<h2>CHARACTERS:</h2>
 	<div className="d-flex text-center mt-5">
-		{character.map((item,i) => {
+		{character.map((item,index) => {
 			return (
-				<CharacterCard key={i}title = {item.name} height ={item.height} mass = {item.mass} eye_color = {item.eye_color}/>
+				<CharacterCard
+				key={index}
+				character person ={item}
+				//key={i}title = {item.name} height ={item.height} mass = {item.mass} eye_color = {item.eye_color}/>
+				/>
 			)
 		})}
 	</div>
 	<h3>PLANETS:</h3>
 	<div className="d-flex text-center mt-5">
-		{planet.map((item,i) => {
+		{planet.map((item,index) => {
 			return (
-				<PlanetCard key={i}title = {item.name} rotation_period ={item.rotation_period} diameter = {item.diameter} climate = {item.climate}  gravity ={item.gravity} />
+				<PlanetCard 
+				key={index}
+				planet={item}
+				//key={i}title = {item.name} rotation_period ={item.rotation_period} diameter = {item.diameter} climate = {item.climate}  gravity ={item.gravity} />
+				/>
 			)
 		})}
 	</div>
