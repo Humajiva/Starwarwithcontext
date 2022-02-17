@@ -13,7 +13,7 @@ export const CharacterCard = (props) => {
                     <p className="card-text">height: {props.person.height}</p>
                     <p className="card-text">mass: {props.person.mass}</p>
                     <p className="card-text">eye color: {props.person.eye_color}</p>
-                    <Link to ={{pathname: "/characterdetail/" +props.person.name, state:props.person}}>
+                    <Link to ={{pathname: "/characterdetail/character/" +props.person.name, state:props.person}}>
                     <span className="btn btn-primary" href="#" role="button">
                          Go Somewhere </span>
                     </Link>

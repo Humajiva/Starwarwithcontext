@@ -15,7 +15,7 @@ export const PlanetCard = (props) => {
                     <p className="card-text">diameter: {props.planet.diameter}</p>
                     <p className="card-text">climate: {props.planet.climate}</p>
                     <p className="card-text">gravity: {props.planet.gravity}</p>
-                    <Link to ={{pathname: "/characterdetail/"+props.planet.name, state:props.planet}}>
+                    <Link to ={{pathname: "/characterdetail/planet/"+props.planet.name, state:props.planet}}>
                     <span href="#" className="btn btn-primary">Go somewhere</span>
                     </Link>
                 </div>
