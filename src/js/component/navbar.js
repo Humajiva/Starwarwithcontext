@@ -12,14 +12,13 @@ export const Navbar = () => {
 			<div className="ml-auto">
 			<li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Favorites
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 			  {store.favorites.map((fav , index) => {
-				  return<li key = {index}><a className="dropdown-item" href="#">{fav.name}</a></li>
+				  return (<li key = {index}>{fav}<span onClick={() => actions.deleteFavorite(fav)}><i className="fas fa-trash"></i></span></li>)
 			  })}
-            {/* <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li> */}
+            
             </ul>
         </li>
 

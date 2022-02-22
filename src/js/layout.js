@@ -18,7 +18,8 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />

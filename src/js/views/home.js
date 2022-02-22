@@ -100,22 +100,24 @@ const updatePut = (updatedCharacters) => {
 		<>
 		<h1>STAR WARS</h1>
 		<h2>CHARACTERS:</h2>
-	<div className="d-flex text-center mt-5">
+		<div className="d-flex flex-row mx-auto" style={{ width: "90%", overflow: "auto" }}>
 		{character.map((item,index) => {
 			return (
 				<CharacterCard
+				className="mx-2"
 				key={index}
-				character person ={item}
+			    person ={item}
 				//key={i}title = {item.name} height ={item.height} mass = {item.mass} eye_color = {item.eye_color}/>
 				/>
 			)
 		})}
 	</div>
 	<h3>PLANETS:</h3>
-	<div className="d-flex text-center mt-5">
+	<div className="d-flex flex-row mx-auto" style={{ width: "90%", overflow: "auto" }}>
 		{planet.map((item,index) => {
 			return (
 				<PlanetCard 
+				className="mx-2"
 				key={index}
 				planet={item}
 				//key={i}title = {item.name} rotation_period ={item.rotation_period} diameter = {item.diameter} climate = {item.climate}  gravity ={item.gravity} />
