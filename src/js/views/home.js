@@ -4,7 +4,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { CharacterCard } from "../component/CharacterCard";
 import { PlanetCard } from "../component/PlanetCard";
-import { CharachterDetail } from "../component/characterdetail";
+import { Detail } from "../component/detail";
 
 //I have 2 set os collection (create 2 array)
 //i have to create component card from boostrap
@@ -98,10 +98,11 @@ const updatePut = (updatedCharacters) => {
 
     return (
 		<>
-		<h1>STAR WARS</h1>
+		<h1 className = "text-white">STAR WARS</h1>
 		<h2>CHARACTERS:</h2>
 		<div className="d-flex flex-row mx-auto" style={{ width: "90%", overflow: "auto" }}>
 		{character.map((item,index) => {
+			item["img"] = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-characters-ranked-1577122930.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*"
 			return (
 				<CharacterCard
 				className="mx-2"
@@ -115,6 +116,7 @@ const updatePut = (updatedCharacters) => {
 	<h3>PLANETS:</h3>
 	<div className="d-flex flex-row mx-auto" style={{ width: "90%", overflow: "auto" }}>
 		{planet.map((item,index) => {
+			item ["img"] = "https://starwarsblog.starwars.com/wp-content/uploads/2018/10/mustafar-tall.jpg"
 			return (
 				<PlanetCard 
 				className="mx-2"

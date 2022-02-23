@@ -18,20 +18,19 @@ const getState = ({ getStore, getActions, setStore }) => {
       // ]
     },
     actions: {
-      addFavorites: (name) => {
+      toggleFavorites: (name) => {
         let favsList = getStore().favorites;
-        if (!getStore().favorites.find((item) => item == name)) {
-          favsList.push(name);
+        let found = favsList.find((item) => item == name)
+        if (found) {
+          favsList = favsList.filter(item => item != name);
+        }
+        else {
+          favsList = [...favsList,name]
         }
         setStore({ favorites: favsList });
-		console.log(getStore().favorites);
+	
       },
-      deleteFavorite: (name) => {
-        let filterFavorites = getStore().favorites.filter(
-          (favoriteToRemove, index) => name != favoriteToRemove
-        );
-        setStore({ favorites: filterFavorites });
-      },
+      
     },
   };
 };
